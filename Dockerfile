@@ -2,5 +2,6 @@ FROM ruby:2.3.3
 
 RUN apt-get update && \
   curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-  apt-get install -y --no-install-recommends git mysql-client && \
+  apt-get install -y --no-install-recommends git mysql-client nodejs && \
+  npm i -g yarn && \
   rm -rf /var/lib/apt/lists/*
